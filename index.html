@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather UI</title>
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+
+  <div class="container weather-container d-flex flex-column align-items-center justify-content-center flex-wrap">
+    <!-- Left Side -->
+    <div class="d-flex gap-3 align-items-center">
+      <h1 class="temp mb-0" id="temp"></h1>
+      <div class="d-flex flex-column align-items-center justify-content-center">
+        <h2 class="city" id="city"></h2>
+        <p class="m-0 p-0" id="date"></p>
+      </div>
+      
+      <img src="" alt="" id="weatherIcon" height="200px">
+    </div>
+
+    <!-- Right Side Weather Details -->
+    <div class="weather-card">
+      <!-- Search -->
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <input type="text" class="form-control bg-transparent text-white  border-2" placeholder="Search Location..." id="searchInp">
+        <i class="bi bi-search ms-3" id="searchIcon"></i>
+      </div>
+
+      <h3 class="mb-4 fw-normal text-center text-uppercase mt-4" id="desc"></h3>
+      <h5 class="text-uppercase text-white-50">Weather Details...</h5>
+      
+
+      <div class="d-flex flex-column gap-3 w-100">
+        <div class="d-flex justify-content-between align-items-center py-1">
+          <span>Temp max</span>
+          <span>
+            <span id="tempMax"></span> 
+            <img class="ms-4 me-1" src="./assets/maxTem.png" alt="maxtemp">
+          </span>
+        </div>
+        <div class="d-flex justify-content-between align-items-center py-1">
+          <span>Temp min</span>
+          <span>
+            <span id="tempMin"></span> 
+            <img class="ms-4 me-1" src="./assets/minTemp.png" alt="min temp">
+          </span>
+        </div>
+        <div class="d-flex justify-content-between align-items-center">
+          <span>Humidity</span>
+          <span>
+             <span id="humidity"></span> 
+             <i class="bi bi-droplet weather-detail-icon ms-3"></i></span>
+        </div>
+        <div class="d-flex justify-content-between align-items-center">
+          <span>Cloudy</span>
+          <span>
+            <span id="cloudy"></span> 
+             <i class="bi bi-clouds weather-detail-icon ms-3"></i></span>
+        </div>
+        <div class="d-flex justify-content-between align-items-center">
+          <span>Wind</span>
+          <span>
+            <span id="windSpeed"></span> 
+             <i class="bi bi-wind weather-detail-icon ms-3"></i></span>
+        </div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
