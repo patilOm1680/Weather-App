@@ -75,7 +75,7 @@ function updateWeather() {
 
     console.log(unsplashData.results[0].urls.raw);
     // document.body.style.backgroundImage = `url('${unsplashData.results[0].urls.raw}')`;
-    document.body.style.backgroundImage = `url('https://images.unsplash.com/photo-1639048661376-83b9c748e961?ixid=M3w4MTgyODN8MHwxfHNlYXJjaHwxfHxzY2F0dGVyZWQlMjBjbG91ZHMlMjBpbiUyMG5pZ2h0fGVufDB8fHx8MTc2MDgwMzUwMHww&ixlib=rb-4.1.0')`;
+    document.body.style.backgroundImage = `url('${unsplashData.results[0].urls.raw}')`;
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundRepeat = "no-repeat";
