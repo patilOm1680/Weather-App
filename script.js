@@ -28,13 +28,16 @@ let searchInput = document.getElementById("searchInp");
 searchInput.addEventListener("keydown", fetchCityUsingEnter);
 function fetchCityUsingEnter(e) {
     if (e.key == "Enter") {
+        
         fetchCity();
+        searchInput.value="";
     }
 }
 
 function fetchCity() {
 
     city_name = searchInput.value;
+    searchInput.value="";
     getData();
 }
 
