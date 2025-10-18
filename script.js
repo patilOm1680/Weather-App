@@ -38,7 +38,7 @@ function fetchCity() {
     getData();
 }
 
-fetchCity();
+// fetchCity();
 function updateWeather() {
 
 
