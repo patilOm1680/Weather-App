@@ -1,5 +1,5 @@
  body {
-      background: url('./assets/plant.jpg') no-repeat center center/cover;
+      background: url('./assets/natureBg.jpg') no-repeat center center/cover;
       height: 100vh;
       color: #fff;
       /* position: relative; */
@@ -16,7 +16,7 @@
     .weather-card {
       width: 600px;
       background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(30px);
       border-radius: 20px;
       padding: 20px;
       color: #fff;
