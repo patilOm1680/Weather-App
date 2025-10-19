@@ -12,8 +12,8 @@ async function getData() {
     data = await response.json();
     // console.log(data);
     // console.log(data.weather[0].icon);
-
-    const unsplashAPI = `${unsplashBaseURL}${client_id}&query=${data.weather[0].description}&orientation=landscape`;
+    const randomPage=Math.floor((Math.random()*4)+1);
+    const unsplashAPI = `${unsplashBaseURL}${client_id}&query=${data.weather[0].description}&page=${randomPage}`;
     const unsplashDataResponce = await fetch(`${unsplashAPI}`);
     unsplashData = await unsplashDataResponce.json();
 
