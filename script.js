@@ -13,10 +13,9 @@ async function getData() {
     // console.log(data);
     // console.log(data.weather[0].icon);
 
-    const unsplashAPI = `${unsplashBaseURL}${client_id}&query=${data.weather[0].description}`;
+    const unsplashAPI = `${unsplashBaseURL}${client_id}&query=${data.weather[0].description}&orientation=landscape`;
     const unsplashDataResponce = await fetch(`${unsplashAPI}`);
     unsplashData = await unsplashDataResponce.json();
-
 
     updateWeather();
 }

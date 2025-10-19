@@ -29,8 +29,11 @@ body {
   align-items: center;
   backdrop-filter: blur(5px);
 }
-
-
+/* 
+#suggestionList{
+  text-align: left;
+  margin-right: 50px;
+} */
 .weatherCard {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 25px;
@@ -47,6 +50,7 @@ body {
 
 
 .search-box {
+  /* position: relative; */
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
