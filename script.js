@@ -55,7 +55,6 @@ function fetchCurrentCity (){
 
 
 
-
 let searchIcon = document.getElementById("searchIcon");
 searchIcon.addEventListener("click", fetchCity);
 let searchInput = document.getElementById("searchInp");
@@ -71,8 +70,13 @@ function fetchCityUsingEnter(e) {
 function fetchCity() {
 
     city_name = searchInput.value;
+    if(city_name){
+        getData();
+    }else{
+        alert("Enter Valid City Name");
+    }
     searchInput.value="";
-    getData();
+    
 }
 
 // fetchCity();
