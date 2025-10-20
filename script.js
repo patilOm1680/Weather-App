@@ -5,6 +5,11 @@ let city_name = "pune";
 
 const weatherIcon = "http://openweathermap.org/img/w/";
 
+let latitude,longitude;
+const CityApiKey="01d452bd0741408e8b0184e9b5c1b6c9";
+
+
+
 let data, unsplashData;
 async function getData() {
     const baseUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city_name}&appid=`;
@@ -19,7 +24,37 @@ async function getData() {
 
     updateWeather();
 }
-getData();
+
+
+//getting user current location
+
+document.addEventListener("DOMContentLoaded",fetchCurrentCity);
+function fetchCurrentCity (){
+     navigator.geolocation.getCurrentPosition(async(location)=>{
+       latitude= location.coords.latitude;
+       longitude= location.coords.longitude;
+       const FetchCtyApiUrl =`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=${CityApiKey}`;
+    //    console.log(latitude,longitude);
+
+    let CityData=await fetch(`${FetchCtyApiUrl}`);
+    CityData=await CityData.json();
+    const city = CityData.results[0].components.state_district;
+    // console.log(typeof city);
+    
+    city_name=(city.split(" ")[0]); 
+    
+    // console.log(typeof city_name);
+    getData();
+
+    },(error)=>{
+        console.log(error.message);
+        getData();
+    });
+
+}
+
+
+
 
 let searchIcon = document.getElementById("searchIcon");
 searchIcon.addEventListener("click", fetchCity);
