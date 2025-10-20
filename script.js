@@ -12,8 +12,8 @@ async function getData() {
     data = await response.json();
     // console.log(data);
     // console.log(data.weather[0].icon);
-    // const randomPage=Math.floor((Math.random()*4)+1);
-    const unsplashAPI = `${unsplashBaseURL}${client_id}&query=${data.weather[0].description}&orientation=landscape`;
+    const randomPage=Math.floor((Math.random()*4)+1);
+    const unsplashAPI = `${unsplashBaseURL}${client_id}&query=${data.weather[0].description}&page=${randomPage}&orientation=landscape`;
     const unsplashDataResponce = await fetch(`${unsplashAPI}`);
     unsplashData = await unsplashDataResponce.json();
 
@@ -77,7 +77,7 @@ function updateWeather() {
 
     console.log(unsplashData.results[0].urls.raw);
     // document.body.style.backgroundImage = `url('${unsplashData.results[0].urls.raw}')`;
-    document.body.style.backgroundImage = `url('${unsplashData.results[0].urls.raw}')`;
+    document.body.style.backgroundImage = `url('${unsplashData.results[0].urls.regular}')`;
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundPosition = "center";
     document.body.style.backgroundRepeat = "no-repeat";
