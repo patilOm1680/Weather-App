@@ -143,6 +143,20 @@ body {
   padding: 8px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+#weatherIcon {
+  animation-name: weatherIconAnimation;
+  animation-duration: 2.3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes weatherIconAnimation {
+  0%, 100% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
 
 @media (max-width: 500px) {
   .weatherCard {
